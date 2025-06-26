@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel - Spin Data</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🛠️ Admin Panel</h2>
+    <p>Total Users: {{ users|length }}</p>
+    <table>
+      <tr>
+        <th>Telegram ID</th>
+        <th>Spins Today</th>
+        <th>Earned ₹</th>
+        <th>Last Spin</th>
+      </tr>
+      {% for uid, u in users.items() %}
+      <tr>
+        <td>{{ uid }}</td>
+        <td>{{ u.total_spins_today }}</td>
+        <td>₹{{ "%.2f"|format(u.total_earned_today) }}</td>
+        <td>{{ u.last_spin_date }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Spin & Earn</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Enter Your Telegram ID</h2>
+    <form method="POST">
+      <input type="text" name="telegram_id" placeholder="6276161763" required />
+      <button type="submit">🎰 Let's Spin</button>
+    </form>
+    <a href="/rules">📜 Rules & Terms</a>
+  </div>
+</body>
+</html>

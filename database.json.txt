@@ -1,0 +1,9 @@
+{
+  "users": {
+    "6276161763": {
+      "total_spins_today": 0,
+      "total_earned_today": 0.0,
+      "last_spin_date": ""
+    }
+  }
+}

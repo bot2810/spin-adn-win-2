@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rules - Spin & Earn</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>📜 Rules & Terms</h2>
+    <ul>
+      <li>🔄 Daily limit: 15 spins per user.</li>
+      <li>🚫 Ad-blockers must be disabled. Otherwise spins won't count.</li>
+      <li>🎥 You must watch the full ad after each spin.</li>
+      <li>🎁 The shown prize is final & non-disputable.</li>
+      <li>❌ Cheating or auto-clickers will result in ban.</li>
+    </ul>
+    <a href="/">← Back to Login</a>
+  </div>
+</body>
+</html>

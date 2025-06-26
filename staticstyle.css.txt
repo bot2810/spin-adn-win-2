@@ -1,0 +1,53 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.container {
+  margin-top: 40px;
+}
+input, button {
+  padding: 12px;
+  margin: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+.banner-ad {
+  background-color: #ffecb3;
+  padding: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.spin-container {
+  margin-top: 30px;
+}
+#fullscreenAd {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}

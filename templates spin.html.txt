@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spin & Earn</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="/static/ads.js" defer></script>
+</head>
+<body>
+  <div class="banner-ad">🔺 Ad Banner (Top)</div>
+
+  <div class="spin-container">
+    <h1>🎯 Spin & Win!</h1>
+    <div id="wheel">🎁</div>
+    <button id="spinBtn">🔄 Spin Now</button>
+    <p id="result"></p>
+  </div>
+
+  <div class="fullscreen-ad" id="fullscreenAd">
+    <p>📢 Watching ad... Please wait 5 sec</p>
+  </div>
+
+  <div class="banner-ad">🔻 Ad Banner (Bottom)</div>
+
+  <script>
+    const spinBtn = document.getElementById("spinBtn");
+    const result = document.getElementById("result");
+    const ad = document.getElementById("fullscreenAd");
+
+    spinBtn.onclick = async () => {
+      spinBtn.disabled = true;
+      ad.style.display = "block";
+      setTimeout(async () => {
+        ad.style.display = "none";
+
+        const res = await fetch("/spin-result", { method: "POST" });
+        const data = await res.json();
+        if (data.status === "limit_reached") {
+          result.innerText = data.message;
+        } else {
+          result.innerText = "🎉 You won: " + data.visual;
+        }
+        spinBtn.disabled = false;
+      }, 5000);
+    };
+  </script>
+</body>
+</html>

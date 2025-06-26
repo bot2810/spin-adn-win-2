@@ -1,0 +1,4 @@
+<div class="fullscreen-ad" id="fullscreenAd">
+  <p>📢 Showing Sponsored Ad...</p>
+  <iframe src="https://youradserver.com/ad.html" width="300" height="250" frameborder="0"></iframe>
+</div>
