@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ad Test</title>
+  <title>Spin and Win</title>
+  <style>
+    #adOverlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000ee;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #mainContent {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- এইটা তোমার এড -->
-  <div id="adMessage" style="position: fixed; top:0; left:0; width:100%; height:100%; background:black; color:white; display:flex; align-items:center; justify-content:center; font-size:24px;">
-    ৫ সেকেন্ডের এড চলছে...
+  <!-- 🔴 এটা হচ্ছে ৫ সেকেন্ডের overlay -->
+  <div id="adOverlay">
+    📢 Watching ad... Please wait 5 sec
   </div>
 
-  <!-- এইটা মূল পেজ -->
-  <div id="mainContent" style="display: none;">
-    <!-- তোমার স্পিন গেম বা অন্য কনটেন্ট -->
-    <h1>Welcome to Spin & Earn!</h1>
+  <!-- ✅ এখানে তোমার মূল কনটেন্ট -->
+  <div id="mainContent">
+    <h1>🎯 Spin & Win!</h1>
+    <button>🎰 Spin Now</button>
   </div>
 
+  <!-- ✅ Script: ৫ সেকেন্ড পর overlay সরিয়ে mainContent দেখাবে -->
   <script>
     window.addEventListener('load', function() {
       setTimeout(function() {
-        const adDiv = document.getElementById('adMessage');
-        const main = document.getElementById('mainContent');
-        if(adDiv) adDiv.style.display = 'none';
-        if(main) main.style.display = 'block';
-      }, 5000); // ৫ সেকেন্ড পর
+        document.getElementById("adOverlay").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+      }, 5000); // ৫ সেকেন্ড = ৫০০০ মিলিসেকেন্ড
     });
   </script>
 
