@@ -12,5 +12,5 @@ window.onload = function () {
       alert("🚫 Please disable AdBlock to continue.");
       window.location.href = "/rules";
     }
-  }, 500);
+  }, );
 };
