@@ -1,9 +1,9 @@
 import requests
 from datetime import datetime
 
-BOT_TOKEN = "YOUR_MAIN_BOT_TOKEN"
-ADMIN_BOT_TOKEN = "YOUR_ADMIN_BOT_TOKEN"
-ADMIN_ID = "YOUR_ADMIN_TELEGRAM_ID"
+BOT_TOKEN = "7429740172:AAEUV6A-YmDSzmL0b_0tnCCQ6SbJBEFDXbg"
+ADMIN_BOT_TOKEN = "7547894309:AAH3zIzu5YfRDzcYBiFvzWAfW8FUTPum3g4"
+ADMIN_ID = "7929115529"
 
 def send_reward_to_user(user_id, amount):
     msg = f"✅ You've received ₹{amount:.2f} in your account!"
